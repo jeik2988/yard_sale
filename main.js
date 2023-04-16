@@ -30,6 +30,8 @@ function toggleMobileMenu(){
     if (!isAsideClosed){
         shoppingCartContainer.classList.add('inactive');
     }
+    closeProductDetailAside();
+
     mobileMenu.classList.toggle('inactive');
 
 }
@@ -42,6 +44,11 @@ function toggleCarritoAside(){
     if (!isDesktopMenuClose){
         destopMenu.classList.add('inactive');
     }
+    const isProductDetailClose= productDetailContainer.classList.contains('inactive');
+    if (!isProductDetailClose){
+        productDetailContainer.classList.add('inactive');
+    }
+
 
     shoppingCartContainer.classList.toggle('inactive');
 }
@@ -49,6 +56,8 @@ function openproductDetailAside(){
     productDetailContainer.classList.remove('inactive');
 }
 function closeProductDetailAside(){
+    shoppingCartContainer.classList.add('inactive');
+
     productDetailContainer.classList.add('inactive');
 }
 
